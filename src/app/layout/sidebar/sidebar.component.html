@@ -1,0 +1,8 @@
+<mat-grid-list cols="12" rowHeight="40px">
+    <mat-grid-tile colspan="12" rowspan="1" *ngFor="let menu of menus">
+        <button mat-button class="menu">
+            <mat-icon>{{menu.icon}}</mat-icon>
+            {{menu.text}}
+        </button>
+    </mat-grid-tile>
+</mat-grid-list>

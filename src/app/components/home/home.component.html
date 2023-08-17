@@ -1,0 +1,83 @@
+<mat-grid-list cols="12" rowHeight="50px" [style.background]="'#E6E6E6'">
+    <mat-grid-tile colspan="10" rowspan="8">
+        <app-clients></app-clients>
+    </mat-grid-tile>
+
+    <!-- Phase Results -->
+    <mat-grid-tile colspan="2" rowspan="6">
+        <mat-card class="card">
+            <mat-card-header>
+                <mat-card-subtitle style="font-size: larger;">Phase Results</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <mat-list>
+                    <mat-list-item *ngFor="let pr of phaseResults">
+                        <span class="phase-details"> {{pr.name}}</span>
+                        {{pr.value}}
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+
+    <!-- Search Bar -->
+    <mat-grid-tile colspan="2" rowspan="2">
+        <form>
+            <mat-form-field class="search-form-field">
+                <mat-label>Search</mat-label>
+                <input type="text" matInput placeholder="Search">
+                <mat-icon matSuffix>search</mat-icon>
+            </mat-form-field>
+        </form>
+    </mat-grid-tile>
+
+    <!-- Cards -->
+    <mat-grid-tile colspan="10" rowspan="8" class="cards-grid">
+        <mat-grid-list cols="12" rowHeight="350px" class="card-list">
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card class="card">
+                    <img mat-card-image class="card-image" src="assets/card-image.png" alt="image">
+                    <mat-card-content>
+                        <h3>Header</h3>
+                        <p style="font-size: large;">
+                            Vestibulum quis tincidunt masaa. Integer pretium tellus eget leo dignissim malesuada.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card class="card">
+                    <img mat-card-image class="card-image" src="assets/card-image.png" alt="image">
+                    <mat-card-content>
+                        <h3>Header</h3>
+                        <p style="font-size: large;">
+                            Vestibulum quis tincidunt masaa. Integer pretium tellus eget leo dignissim malesuada.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+            <mat-grid-tile colspan="4" rowspan="1">
+                <mat-card class="card">
+                    <img mat-card-image class="card-image" src="assets/card-image.png" alt="image">
+                    <mat-card-content>
+                        <h3>Header</h3>
+                        <p style="font-size: large;">
+                            Vestibulum quis tincidunt masaa. Integer pretium tellus eget leo dignissim malesuada.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-grid-tile>
+
+    <!-- Progress -->
+    <mat-grid-tile colspan="2" rowspan="8" class="progress-card">
+        <mat-progress-spinner class="spinner-margin" color="purple" mode="determinate" value="70">
+        </mat-progress-spinner>
+        <h3 style="text-align: center; font-weight: bold;">Current Progress</h3>
+        <p style="text-align: center; margin-top: -15px;">iste natus error sit volutatem</p>
+        <p style="text-align: left; font-weight: bold; margin-left: 10%;">Neque porro quisquam est qui dolorem ipsum
+            quila dolor sit amet, consectetur, adipisci velit.</p>
+    </mat-grid-tile>
+
+</mat-grid-list>
